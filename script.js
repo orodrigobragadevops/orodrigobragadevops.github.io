@@ -185,30 +185,9 @@ document.querySelectorAll('.stat-card').forEach(card => {
   statsObserver.observe(card);
 });
 
-// ========== RIPPLE EFFECT NOS BOTÕES ========== 
-const buttons = document.querySelectorAll('.btn');
-
-buttons.forEach(button => {
-  button.addEventListener('click', function (e) {
-    const ripple = document.createElement('span');
-    const rect = this.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = e.clientX - rect.left - size / 2;
-    const y = e.clientY - rect.top - size / 2;
-
-    ripple.style.width = ripple.style.height = size + 'px';
-    ripple.style.left = x + 'px';
-    ripple.style.top = y + 'px';
-    ripple.classList.add('ripple');
-
-    this.appendChild(ripple);
-
-    // Remover o ripple após a animação para não acumular elementos no DOM
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
-  });
-});
+// ========== EFEITO DE CLIQUE NOS BOTÕES ========== 
+// Removido ripple dinâmico para evitar bugs de layout.
+// A animação agora é tratada puramente via CSS (:active).
 
 // ========== PRELOAD DE IMAGENS ========== 
 function preloadImages() {
