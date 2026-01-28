@@ -169,12 +169,12 @@ function animateCounter(element, target, duration = 2000) {
 const statsObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const statNumber = entry.target.querySelector('.stat-number');
-      const text = statNumber.textContent;
-      const number = parseInt(text);
-      
-      if (!isNaN(number)) {
-        animateCounter(statNumber, number);
+      const counterElement = entry.target.querySelector('.counter');
+      if (counterElement) {
+        const target = parseInt(counterElement.getAttribute('data-target'));
+        if (!isNaN(target)) {
+          animateCounter(counterElement, target);
+        }
       }
       statsObserver.unobserve(entry.target);
     }
