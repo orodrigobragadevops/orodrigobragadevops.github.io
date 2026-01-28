@@ -201,13 +201,12 @@ buttons.forEach(button => {
     ripple.style.top = y + 'px';
     ripple.classList.add('ripple');
 
-    // Remover ripple anterior se existir
-    const existingRipple = this.querySelector('.ripple');
-    if (existingRipple) {
-      existingRipple.remove();
-    }
-
     this.appendChild(ripple);
+
+    // Remover o ripple após a animação para não acumular elementos no DOM
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
   });
 });
 
