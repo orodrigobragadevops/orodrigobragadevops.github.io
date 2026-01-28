@@ -1,87 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rodrigo Braga Guimarães | Portfólio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Rodrigo Guimarães | Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header class="header">
-    <h1>Rodrigo Guimarães</h1>
-    <p>Engenharia de Dados • BI • Automação • SQL • Python</p>
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#skills">Skills</a>
-        <a href="#contato">Contato</a>
-    </nav>
+<header class="navbar">
+  <span class="logo">RG</span>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#skills">Skills</a>
+    <a href="#contato">Contato</a>
+  </nav>
 </header>
 
-<section id="sobre" class="section">
-    <h2>Sobre mim</h2>
-    <p>
-        Sou profissional de dados com foco em Engenharia de Dados, BI e automação de processos.
-        Atuo com SQL, Power BI, Azure, Python e integração de sistemas como SAP.
-        Gosto de resolver problemas complexos com soluções simples, escaláveis e bem estruturadas.
-    </p>
+<section class="hero">
+  <h1>Rodrigo Guimarães</h1>
+  <h2>Engenharia de Dados • BI • Automação</h2>
+  <p>
+    Crio soluções de dados escaláveis, performáticas e orientadas a negócio.
+  </p>
 </section>
 
-<section id="projetos" class="section bg">
-    <h2>Projetos</h2>
+<section id="sobre" class="section">
+  <h3>Sobre mim</h3>
+  <p>
+    Atuo com Engenharia de Dados, BI e automação de processos.
+    Tenho forte experiência com SQL, Power BI, Azure, Python e integrações com SAP.
+    Busco sempre soluções simples, rastreáveis e escaláveis.
+  </p>
+</section>
 
-    <div class="projects">
-        <div class="card">
-            <h3>📊 Data Warehouse & Power BI</h3>
-            <p>Modelagem estrela, cargas incrementais, performance e visualizações estratégicas.</p>
-            <a href="#" target="_blank">Ver no GitHub</a>
-        </div>
+<section id="projetos" class="section">
+  <h3>Projetos</h3>
 
-        <div class="card">
-            <h3>⚙️ Automação SAP + Excel</h3>
-            <p>Automação via VBA e Selenium para extração e tratamento de dados.</p>
-            <a href="#" target="_blank">Ver no GitHub</a>
-        </div>
-
-        <div class="card">
-            <h3>☁️ Engenharia de Dados Azure</h3>
-            <p>Pipelines com Data Factory, camadas Bronze/Silver/Gold e governança.</p>
-            <a href="#" target="_blank">Ver no GitHub</a>
-        </div>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Data</span>
+      <h4>Data Warehouse & Power BI</h4>
+      <p>Arquitetura estrela, DAX avançado, performance e governança.</p>
+      <a href="#">Ver projeto →</a>
     </div>
+
+    <div class="card">
+      <span class="tag">Automação</span>
+      <h4>SAP + VBA + Selenium</h4>
+      <p>Extração automatizada de dados e padronização de relatórios.</p>
+      <a href="#">Ver projeto →</a>
+    </div>
+
+    <div class="card">
+      <span class="tag">Cloud</span>
+      <h4>Engenharia de Dados Azure</h4>
+      <p>ADF, Fabric, Bronze/Silver/Gold, cargas incrementais.</p>
+      <a href="#">Ver projeto →</a>
+    </div>
+  </div>
 </section>
 
 <section id="skills" class="section">
-    <h2>Skills</h2>
+  <h3>Skills</h3>
 
-    <ul class="skills">
-        <li>SQL Server / Oracle / SAP HANA</li>
-        <li>Power BI / DAX / Modelagem Dimensional</li>
-        <li>Python / Automação / ETL</li>
-        <li>Azure Data Factory / Fabric</li>
-        <li>Git / GitHub / CI básico</li>
-    </ul>
+  <div class="skills">
+    <span>SQL Server</span>
+    <span>Oracle</span>
+    <span>SAP HANA</span>
+    <span>Power BI</span>
+    <span>DAX</span>
+    <span>Python</span>
+    <span>Azure</span>
+    <span>Data Factory</span>
+    <span>Fabric</span>
+    <span>Git</span>
+  </div>
 </section>
 
-<section id="contato" class="section bg">
-    <h2>Contato</h2>
-    <p>Vamos conversar?</p>
+<section id="contato" class="section">
+  <h3>Contato</h3>
 
-    <div class="contact">
-        <a href="mailto:rbraga1@live.com">📧 Email</a>
-        <a href="https://github.com/orodrigobragadevops" target="_blank">💻 GitHub</a>
-        <a href="https://www.linkedin.com/in/rbragaguimaraes" target="_blank">🔗 LinkedIn</a>
-    </div>
+  <div class="contact">
+    <a href="mailto:seuemail@email.com">Email</a>
+    <a href="https://github.com/seugithub" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/seulinkedin" target="_blank">LinkedIn</a>
+  </div>
 </section>
 
-<footer class="footer">
-    <p>© 2026 - Rodrigo Braga Guimarães</p>
+<footer>
+  © 2026 • Rodrigo Guimarães
 </footer>
 
 </body>
 </html>
-
