@@ -9,97 +9,271 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
   <span class="logo">RG</span>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#skills">Skills</a>
-    <a href="#contato">Contato</a>
+  <nav class="nav-menu">
+    <a href="#sobre" class="nav-link">Sobre</a>
+    <a href="#projetos" class="nav-link">Projetos</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#contato" class="nav-link">Contato</a>
   </nav>
+  
+  <!-- Menu mobile -->
+  <div class="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
-  <h1>Rodrigo Braga Guimarães</h1>
-  <h2>Engenharia de Dados • BI • Automação</h2>
-  <p>
-    Crio soluções de dados escaláveis, performáticas e orientadas a negócio.
-  </p>
+  <div class="hero-content">
+    <h1 class="hero-title">Rodrigo Braga Guimarães</h1>
+    <h2 class="hero-subtitle">Engenharia de Dados • BI • Automação</h2>
+    <p class="hero-description">
+      Crio soluções de dados escaláveis, performáticas e orientadas a negócio.
+    </p>
+    
+    <div class="hero-cta">
+      <a href="#projetos" class="btn btn-primary">Explorar Projetos</a>
+      <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+    </div>
+  </div>
+  
+  <!-- Elemento decorativo com animação -->
+  <div class="hero-decoration">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+  </div>
 </section>
 
+<!-- SOBRE SECTION -->
 <section id="sobre" class="section">
-  <h3>Sobre mim</h3>
-  <p>
-    Atuo com Engenharia de Dados, BI e automação de processos.
-    Tenho forte experiência com SQL, Power BI, Azure, Python e integrações com SAP.
-    Busco sempre soluções simples, rastreáveis e escaláveis.
-  </p>
+  <div class="section-content">
+    <h3 class="section-title">Sobre mim</h3>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Atuo com <strong>Engenharia de Dados</strong>, <strong>BI</strong> e <strong>automação de processos</strong>.
+          Tenho forte experiência com SQL, Power BI, Azure, Python e integrações com SAP.
+          Busco sempre soluções simples, rastreáveis e escaláveis.
+        </p>
+        <p style="margin-top: 1rem;">
+          Minha abordagem combina análise técnica profunda com foco em resultados de negócio, 
+          garantindo que cada solução agregue valor real aos stakeholders.
+        </p>
+      </div>
+      
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Anos de Experiência</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Projetos Entregues</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Satisfação de Clientes</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- PROJETOS SECTION -->
 <section id="projetos" class="section">
-  <h3>Projetos</h3>
+  <div class="section-content">
+    <h3 class="section-title">Projetos em Destaque</h3>
+    <p class="section-subtitle">Conheça os principais projetos que desenvolvi</p>
 
-  <div class="grid">
-    <div class="card">
-      <span class="tag">Data</span>
-      <h4>Data Warehouse & Power BI</h4>
-      <p>Arquitetura estrela, DAX avançado, performance e governança.</p>
-      <a href="#">Ver projeto →</a>
-    </div>
+    <div class="grid">
+      <div class="card" data-category="data">
+        <div class="card-header">
+          <span class="tag">Data</span>
+          <div class="card-icon">
+            <i class="fas fa-database"></i>
+          </div>
+        </div>
+        <h4>Data Warehouse & Power BI</h4>
+        <p>Arquitetura estrela, DAX avançado, performance e governança de dados em ambiente corporativo.</p>
+        <div class="card-tech">
+          <span class="tech-badge">SQL Server</span>
+          <span class="tech-badge">Power BI</span>
+          <span class="tech-badge">DAX</span>
+        </div>
+        <a href="#" class="card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+      </div>
 
-    <div class="card">
-      <span class="tag">Automação</span>
-      <h4>SAP + VBA + Selenium</h4>
-      <p>Extração automatizada de dados e padronização de relatórios.</p>
-      <a href="#">Ver projeto →</a>
-    </div>
+      <div class="card" data-category="automation">
+        <div class="card-header">
+          <span class="tag">Automação</span>
+          <div class="card-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+        </div>
+        <h4>SAP + VBA + Selenium</h4>
+        <p>Extração automatizada de dados e padronização de relatórios com integração SAP e web scraping.</p>
+        <div class="card-tech">
+          <span class="tech-badge">VBA</span>
+          <span class="tech-badge">Selenium</span>
+          <span class="tech-badge">SAP</span>
+        </div>
+        <a href="#" class="card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+      </div>
 
-    <div class="card">
-      <span class="tag">Cloud</span>
-      <h4>Engenharia de Dados Azure</h4>
-      <p>ADF, Fabric, Bronze/Silver/Gold, cargas incrementais.</p>
-      <a href="#">Ver projeto →</a>
+      <div class="card" data-category="cloud">
+        <div class="card-header">
+          <span class="tag">Cloud</span>
+          <div class="card-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+        </div>
+        <h4>Engenharia de Dados Azure</h4>
+        <p>ADF, Fabric, arquitetura Bronze/Silver/Gold e cargas incrementais em ambiente cloud escalável.</p>
+        <div class="card-tech">
+          <span class="tech-badge">Azure</span>
+          <span class="tech-badge">ADF</span>
+          <span class="tech-badge">Fabric</span>
+        </div>
+        <a href="#" class="card-link">Ver projeto <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- SKILLS SECTION -->
 <section id="skills" class="section">
-  <h3>Skills</h3>
+  <div class="section-content">
+    <h3 class="section-title">Competências Técnicas</h3>
+    <p class="section-subtitle">Tecnologias e ferramentas que domino</p>
 
-  <div class="skills">
-    <span>SQL Server</span>
-    <span>Oracle</span>
-    <span>SAP HANA</span>
-    <span>Power BI</span>
-    <span>DAX</span>
-    <span>Python</span>
-    <span>Azure</span>
-    <span>Data Factory</span>
-    <span>Fabric</span>
-    <span>Git</span>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h4 class="category-title">
+          <i class="fas fa-database"></i> Bancos de Dados
+        </h4>
+        <div class="skills">
+          <span class="skill-tag">SQL Server</span>
+          <span class="skill-tag">Oracle</span>
+          <span class="skill-tag">SAP HANA</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4 class="category-title">
+          <i class="fas fa-chart-bar"></i> BI & Analytics
+        </h4>
+        <div class="skills">
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">DAX</span>
+          <span class="skill-tag">Tableau</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4 class="category-title">
+          <i class="fas fa-cloud"></i> Cloud & Infraestrutura
+        </h4>
+        <div class="skills">
+          <span class="skill-tag">Azure</span>
+          <span class="skill-tag">Data Factory</span>
+          <span class="skill-tag">Fabric</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4 class="category-title">
+          <i class="fas fa-code"></i> Programação
+        </h4>
+        <div class="skills">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">VBA</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="contato" class="section">
-  <h3>Contato</h3>
+<!-- CONTATO SECTION -->
+<section id="contato" class="section section-contact">
+  <div class="section-content">
+    <h3 class="section-title">Vamos Conversar?</h3>
+    <p class="section-subtitle">Estou sempre aberto a novas oportunidades e colaborações</p>
 
-  <div class="contact">
-    <a href="mailto:rbraga1@live.com">Email</a>
-    <a href="https://github.com/orodrigobragadevops" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/rbragaguimaraes" target="_blank">LinkedIn</a>
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <a href="mailto:rbraga1@live.com">rbraga1@live.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-details">
+            <h4>GitHub</h4>
+            <a href="https://github.com/orodrigobragadevops" target="_blank">orodrigobragadevops</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="contact-details">
+            <h4>LinkedIn</h4>
+            <a href="https://linkedin.com/in/rbragaguimaraes" target="_blank">rbragaguimaraes</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta">
+        <a href="mailto:rbraga1@live.com" class="btn btn-primary btn-large">
+          <i class="fas fa-paper-plane"></i> Enviar Mensagem
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2026 • Rodrigo Braga Guimarães
+  <div class="footer-content">
+    <p>&copy; 2026 • Rodrigo Braga Guimarães</p>
+    <div class="footer-links">
+      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
 </footer>
+
+<!-- Botão voltar ao topo -->
+<button class="scroll-to-top" id="scrollToTop">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Scripts -->
+<script src="script.js"></script>
 
 </body>
 </html>
-
-
-
