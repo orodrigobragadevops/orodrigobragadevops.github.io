@@ -57,18 +57,38 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.profile-img-nav {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.logo-text {
   font-weight: 900;
   font-size: 1.3rem;
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  cursor: pointer;
-  transition: var(--transition-fast);
 }
 
 .logo:hover {
   transform: scale(1.05);
+}
+
+.logo:hover .profile-img-nav {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
 }
 
 .nav-menu {
